@@ -38,7 +38,7 @@ def compute_phi(filename, event):
 def compute_correlations(filename):
     journal = load_journal(filename)  # Load the journal data
     event_correlations = {} # Initialize a dictionary to hold the correlations
-    all_events = set(event for entry in journal for event in entry['events'])  # Create a set of all unique events set method is used to 
+    all_events = set(event for entry in journal for event in entry['events'])  # Create a set of all unique events set method is used to avoid duplication of events.
     
 # Compute the phi coefficient for each event and store it in the dictionary
     for event in all_events: 
